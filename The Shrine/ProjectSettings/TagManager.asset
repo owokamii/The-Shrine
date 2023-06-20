@@ -4,17 +4,19 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Objects
+  - Checkpoint
   - Enemy
+  - Objects
+  - Ladder
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Objects
+  - 
   - Water
   - UI
   - 
-  - 
+  - Objects
   - 
   - 
   - 
@@ -42,13 +44,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Background
-    uniqueID: 3785182499
-    locked: 0
-  - name: Midground
-    uniqueID: 1533295725
-    locked: 0
-  - name: Foreground
-    uniqueID: 3894864543
     locked: 0
