@@ -13,6 +13,7 @@ public class Jump : MonoBehaviour
     private Controller _controller;
     private Rigidbody2D _body;
     private CollisionDataRetriever _ground;
+    private Climb _climb;
     private Vector2 _velocity;
 
     private int _jumpPhase;
@@ -27,8 +28,16 @@ public class Jump : MonoBehaviour
         _body = GetComponent<Rigidbody2D>();
         _ground = GetComponent<CollisionDataRetriever>();
         _controller = GetComponent<Controller>();
+        _climb = GetComponent<Climb>();
 
-        _defaultGravityScale = 1f;
+        if(!_climb.isClimbing)
+        {
+            _defaultGravityScale = 1f;
+        }
+        else
+        {
+            _defaultGravityScale = 0f;
+        }
     }
 
     // Update is called once per frame

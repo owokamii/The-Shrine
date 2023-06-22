@@ -22,4 +22,9 @@ public class PlayerController : InputController
     {
         return Input.GetButton("Crouch");
     }
+
+    public override float RetrieveClimbInput(GameObject gameObject)
+    {
+        return Input.GetAxisRaw("Vertical");
+    }
 }

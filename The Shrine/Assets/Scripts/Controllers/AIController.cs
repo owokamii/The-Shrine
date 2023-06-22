@@ -17,8 +17,14 @@ public class AIController : InputController
     {
         return false;
     }
+
     public override bool RetrieveCrouchInput(GameObject gameObject)
     {
         return false;
+    }
+
+    public override float RetrieveClimbInput(GameObject gameObject)
+    {
+        return 1f;
     }
 }

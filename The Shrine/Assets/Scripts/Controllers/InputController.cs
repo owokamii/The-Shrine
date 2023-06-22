@@ -6,4 +6,5 @@ public abstract class InputController : ScriptableObject
     public abstract bool RetrieveJumpInput(GameObject gameObject);
     public abstract bool RetrieveJumpHoldInput(GameObject gameObject);
     public abstract bool RetrieveCrouchInput(GameObject gameObject);
+    public abstract float RetrieveClimbInput(GameObject gameObject);
 }
