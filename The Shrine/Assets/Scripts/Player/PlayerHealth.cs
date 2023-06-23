@@ -23,10 +23,7 @@ public class PlayerHealth : MonoBehaviour
     {
         //StartCoroutine(Drain());
 
-        if (currentThirst < 0)
-        {
-            Die();
-        }
+        currentThirst = ((currentThirst > maxThirst) ? maxThirst : (currentThirst < 0) ? 0 : currentThirst);
     }
 
     IEnumerator Drain()
