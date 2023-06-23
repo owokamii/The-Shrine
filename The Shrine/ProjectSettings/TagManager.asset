@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Objects
   - Ladder
+  - Immortal
+  - Sunlight
   layers:
   - Default
   - TransparentFX
@@ -44,4 +46,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 824240913
+    locked: 0
+  - name: Platforms
+    uniqueID: 500724485
+    locked: 0
+  - name: Environment
+    uniqueID: 3616763571
+    locked: 0
+  - name: Midground
+    uniqueID: 3654045009
+    locked: 0
+  - name: Foreground
+    uniqueID: 966879913
     locked: 0

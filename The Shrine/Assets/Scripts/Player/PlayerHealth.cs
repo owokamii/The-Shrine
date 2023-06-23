@@ -21,15 +21,18 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
-        if(currentThirst < 0)
-        {
+        //StartCoroutine(Drain());
 
-        }
-
-        if(Input.GetKeyDown(KeyCode.W))
+        if (currentThirst < 0)
         {
-            Dehydration(10);
+            Die();
         }
+    }
+
+    IEnumerator Drain()
+    {
+        Dehydration(1);
+        yield return new WaitForSeconds(5);
     }
 
     void Dehydration(int damage)
@@ -38,9 +41,15 @@ public class PlayerHealth : MonoBehaviour
         thirstBar.SetThirst(currentThirst);
     }
 
+    /*
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Enemy")
+        if(collision.tag == "Sunlight")
+        {
+            Debug.Log("dehydrating");
+            Dehydration(1);
+        }
+        if(collision.tag == "Enemy")
         {
             Die();
         }
@@ -49,7 +58,16 @@ public class PlayerHealth : MonoBehaviour
             spawnPoint = transform.position;
         }
     }
-
+    */
+    /*
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.tag == "Sunlight")
+        {
+            InvokeRepeating("Dehydration", 1, 1);
+        }
+    }
+    */
     void Die()
     {
         Respawn();
